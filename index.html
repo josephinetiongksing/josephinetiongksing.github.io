@@ -34,6 +34,19 @@
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
+    
+    .part-drawings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      gap: 15px;                      /* Space between images */
+      margin-top: 15px;
+    }
+
+    .part-drawings-grid img {
+      width: 100%;
+      margin-top: 0;                  /* Override the default margin-top */
+      border: 1px solid #ddd;
+    }
 
     img {
       width: 100%;
@@ -50,6 +63,13 @@
       padding: 20px;
       background: #eaeaea;
     }
+
+    figcaption {
+      font-size: 13px;
+      font-style: italic;
+      color: #555;
+    }
+    
   </style>
 </head>
 
@@ -64,19 +84,14 @@
   <h2>Projects</h2>
 
   <div class="project">
-    <h3>Assembly Project with Technical Drawings</h3>
+    <h3>Project 1 - Assembly Project with Technical Drawings</h3>
     <p><strong>Software:</strong> SolidWorks</p>
     <p>
-      Developed a fully parametric multi-part glue stick assembly in SolidWorks, 
-      including body, cap, shaft, and seat components. Produced production-standard 
-      technical drawings in accordance with AS1100, incorporating sectional views, 
-      detail views, tolerancing, surface finish specifications, and material selection 
-      (PP copolymer and homopolymer).
-
-      Key features include circular patterning on PCD, M6 threading, mass property evaluation, 
-      and complete Bill of Materials (BOM) generation. The project demonstrates proficiency 
-      in parametric modelling, assembly management, manufacturability considerations, 
-      and engineering drawing standards.
+      Key Features:<strong><br>
+      Parametric Design: Engineered a four-part assembly (including cap, body, seat and shaft) using advanced modeling techniques and assembly management.<br>
+      AS1100 Compliance: Produced professional technical drawings featuring sectional and detail views, tolerancing, and surface finish specifications.<br>
+      Advanced CAD Features: Utilized circular patterning on PCD, M6 thread modeling, and mass property evaluation for design validation.<br>
+      Manufacturing Focused: Specified materials (PP Copolymer/Homopolymer) and generated a comprehensive Bill of Materials (BOM) for production readiness<br>
     </p>
     
     <figure>
@@ -95,27 +110,28 @@
     </figure>
 
     <figure>
-      <img src="cap.jpg" alt="Project 1">
-      <img src="body.jpg" alt="Project 1">
-      <img src="seat.jpg" alt="Project 1">
-      <img src="shaft.jpg" alt="Project 1">
+      <div class="part-drawings-grid">
+        <img src="cap.jpg" alt="Project 1 Cap Drawing">
+        <img src="body.jpg" alt="Project 1 Body Drawing">
+        <img src="seat.jpg" alt="Project 1 Seat Drawing">
+        <img src="shaft.jpg" alt="Project 1 Shaft Drawing">
+      </div>
       <figcaption>Project 1 - Glue Stick Part Drawings  </figcaption>
     </figure>
     
   </div>
 
   <div class="project">
-    <h3>Mechanical Component Model</h3>
+    <h3>Project 2 - Mechanical Component Model</h3>
     <p><strong>Software:</strong> SolidWorks</p>
     <p>
       This simplified T-nut model was developed as part of Practice Problem 7.7 from the 
       Dassault Systèmes SOLIDWORKS CSWA (Certified SOLIDWORKS Associate) training 
-      curriculum.
-      Key technical features include a revolved base for the central hub, circular 
-      patterning of four evenly spaced blades, and the application of specific fillet 
-      radii to meet design intent. The model demonstrates proficiency in parametric 
-      sketching, the use of reference geometry for blade positioning, and the execution of 
-      complex features.
+      curriculum.<br>
+      Key technical features: <br>
+      - Proficiency in parametric sketching following given design constraints and dimensions<br>
+      - Revolved base and use of offset entities for sketching the central hub<br>
+      - Use of reference geometry for blade positioning
     </p>
 
     <figure>
@@ -141,22 +157,23 @@
   </div>
 
   <div class="project">
-    <h3>Advanced Parametric Design</h3>
+    <h3>Project 3 - Advanced Parametric Design</h3>
     <p><strong>Software:</strong> SolidWorks</p>
     <p>
       This model was developed as part of Practice Problem 10.6 from the 
       Dassault Systèmes SOLIDWORKS CSWA (Certified SOLIDWORKS Associate) training 
-      curriculum.
+      curriculum.<br>
       Key technical features: <br>
-      - integration of virtual sharps for critical dimensioning, <br>
-      - complex angular reference planes for non-orthogonal features, <br>
-      -synthesis of multi-view data from given drawing.
+      - integration of virtual sharps for critical dimensioning <br>
+      - complex angular reference planes for non-orthogonal features <br>
+      - synthesis of multi-view data from given drawing
     </p>
     
     <figure>
       <model-viewer 
         src="CSWApractiseproblem10.6.glb"
             alt="Simplified Lever Part"
+        shadow-intensity="1"
         auto-rotate
         camera-controls
         background-color="#f4f6f9"
